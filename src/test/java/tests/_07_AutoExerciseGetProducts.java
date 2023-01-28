@@ -54,6 +54,7 @@ public class _07_AutoExerciseGetProducts {
 
         BufferedWriter writer = new BufferedWriter(new FileWriter("src/test/java/testData/Products.txt", false));
         List<String> productList = json.getList("products");
+        Log.startTestCase("Product List");
         for (int i = 0; i < productList.size(); i++) {
 
             Log.info(json.getString("products[" + i + "]\n")); // Log4j
@@ -61,6 +62,7 @@ public class _07_AutoExerciseGetProducts {
             writer.append(json.getString("products[" + i + "]")).append(",\n");
             // System.out.println(json.getString("products[" + i + "]"));
         }
+        Log.endTestCase("Product List End");
         writer.close();
 
 
