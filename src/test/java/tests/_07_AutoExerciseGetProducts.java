@@ -56,7 +56,7 @@ public class _07_AutoExerciseGetProducts {
         List<String> productList = json.getList("products");
         for (int i = 0; i < productList.size(); i++) {
 
-            Log.info(json.getString("products[" + i + "]\n"));
+            Log.info(json.getString("products[" + i + "]\n")); // Log4j
             logger.info(json.getString("products[" + i + "]\n"));
             writer.append(json.getString("products[" + i + "]")).append(",\n");
             // System.out.println(json.getString("products[" + i + "]"));
