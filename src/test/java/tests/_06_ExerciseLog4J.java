@@ -35,6 +35,7 @@ public class _06_ExerciseLog4J {
     @Test(priority = 0)
     public void test01() {
 
+        logger.info("get request url https://reqres.in/api/users?page=2&id=5");
         // https://reqres.in/api/users?page=2&id=5
         given().pathParams("myPath", "users")
                 .queryParam("page", 2)
@@ -42,12 +43,12 @@ public class _06_ExerciseLog4J {
                 .when()
                 .get(ConfigReader.getProperty("reqresApiBaseUrl") + "{myPath}")
                 .prettyPrint();
-        logger.info("get request url https://reqres.in/api/users?page=2&id=5");
     }
 
     @Test(priority = 1)
     public void parsingTestXMLResponse() {
 
+        logger.info("get request url http://restapi.adequateshop.com/api/Traveler?page=1");
         // http://restapi.adequateshop.com/api/Traveler?page=1
         given()
                 .when()
@@ -58,17 +59,17 @@ public class _06_ExerciseLog4J {
                 .body("TravelerinformationResponse.page", Matchers.equalTo("1"))
                 .body("TravelerinformationResponse.travelers.Travelerinformation[0].name", Matchers.equalTo("Developer"));
 
-        logger.info("get request url http://restapi.adequateshop.com/api/Traveler?page=1");
-
         Response response = given()
                 .when()
                 .get(ConfigReader.getProperty("restApiBaseUrl") + "Traveler?page=1");
 
+        logger.info("Do Assertion getStatusCode");
+
         assertEquals(200, response.getStatusCode());
         assertEquals("application/xml; charset=utf-8", response.header("Content-Type"));
 
-        logger.info("Do Assertion getStatusCode");
 
+        logger.info("Do Assertion response.xmlPath()");
         // xmlPath
         String pageNO = response.xmlPath().get("TravelerinformationResponse.page").toString();
         assertEquals("1", pageNO);
@@ -76,7 +77,7 @@ public class _06_ExerciseLog4J {
         String travelerName = response.xmlPath().get("TravelerinformationResponse.travelers.Travelerinformation[0].name").toString();
         assertEquals("Developer", travelerName);
 
-        logger.info("Do Assertion response.xmlPath()");
+
     }
 
     @Test(priority = 2)
@@ -105,14 +106,14 @@ public class _06_ExerciseLog4J {
         for (String travelerName : traveler_names) {
 
             logger.info(travelerName);
-
         }
 
         boolean status = false;
         for (String travelerName : traveler_names) {
 
-            if (travelerName.equals("Developer")) {
+            if (travelerName.contains("Developer")) {
                 status = true;
+                logger.info("travelerName.contains(\"Developer\")");
                 break;
             }
         }
