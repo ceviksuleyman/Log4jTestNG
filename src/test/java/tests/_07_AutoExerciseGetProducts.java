@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Log;
@@ -16,7 +17,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
-
+@Listeners(utilities.Listeners.class)
 public class _07_AutoExerciseGetProducts {
 
     private Logger logger = LogManager.getLogger(_07_AutoExerciseGetProducts.class.getName());

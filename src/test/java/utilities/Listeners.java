@@ -46,7 +46,11 @@ public class Listeners implements ITestListener { // ! implements ITestListener
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-
         ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+    }
+
+    @Override
+    public void onTestFailedWithTimeout(ITestResult result) {
+        ITestListener.super.onTestFailedWithTimeout(result);
     }
 }
