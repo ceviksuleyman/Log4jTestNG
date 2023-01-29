@@ -2,10 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-    <!--Listener'lar Test Class'a Baglamak icin kullanilir.
-    https://testng.org/doc/documentation-main.html#testng-listeners-->
+    <!--Listener'lar Test Class'a Baglamak icin kullanilir.-->
     <listeners>
-        <!--Listener Utility class path -->
+        <!-- Listener Utility class path -->
         <listener class-name="utilities.Listeners"/>
     </listeners>
 
@@ -18,3 +17,4 @@
         </classes>
     </test>
 </suite>
+        <!-- https://testng.org/doc/documentation-main.html#testng-listeners-->
