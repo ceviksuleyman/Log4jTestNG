@@ -44,7 +44,9 @@ public class Listeners implements ITestListener { // ! implements ITestListener
         System.out.println("onTestFailure - FAILED edilen Method sayisi kadar,ve Failed edilen Method'lardan SONRA bir kez calisir => " + result.getName());
     }
 
+    @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 
+        ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
     }
 }
