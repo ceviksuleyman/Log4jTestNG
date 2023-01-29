@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
 
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
 
@@ -17,7 +18,7 @@ import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-
+@Listeners(utilities.Listeners.class)
 public class _06_ExerciseLog4J {
 
     private static Logger logger = LogManager.getLogger(_06_ExerciseLog4J.class.getName());

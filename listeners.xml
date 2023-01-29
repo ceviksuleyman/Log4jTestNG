@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <!--Listener'lar Test Class'a Baglamak icin kullanilir.
+    https://testng.org/doc/documentation-main.html#testng-listeners-->
+    <listeners>
+        <!--Listener Utility class path -->
+        <listener class-name="utilities.Listeners"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
+          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_06_ExerciseLog4J.java">
+
+        <classes>
+            <!--Test class path -->
+            <class name="tests._06_ExerciseLog4J"/>
+        </classes>
+    </test>
+</suite>

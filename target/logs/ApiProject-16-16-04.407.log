@@ -1,0 +1,15 @@
+2023-01-29 16:16:04,401 INFO t._06_ExerciseLog4J [main] get request url https://reqres.in/api/users?page=2&id=5
+2023-01-29 16:16:06,083 INFO t._06_ExerciseLog4J [main] get request url http://restapi.adequateshop.com/api/Traveler?page=1
+2023-01-29 16:16:08,516 INFO t._06_ExerciseLog4J [main] Do Assertion getStatusCode
+2023-01-29 16:16:08,522 INFO t._06_ExerciseLog4J [main] Do Assertion response.xmlPath()
+2023-01-29 16:16:09,975 INFO t._06_ExerciseLog4J [main] Developer
+2023-01-29 16:16:09,975 INFO t._06_ExerciseLog4J [main] AS
+2023-01-29 16:16:09,975 INFO t._06_ExerciseLog4J [main] vano
+2023-01-29 16:16:09,995 INFO t._06_ExerciseLog4J [main] Developer123
+2023-01-29 16:16:09,995 INFO t._06_ExerciseLog4J [main] Ashor
+2023-01-29 16:16:09,995 INFO t._06_ExerciseLog4J [main] 1234
+2023-01-29 16:16:09,996 INFO t._06_ExerciseLog4J [main] asdasd
+2023-01-29 16:16:09,996 INFO t._06_ExerciseLog4J [main] da
+2023-01-29 16:16:09,996 INFO t._06_ExerciseLog4J [main] asdasd
+2023-01-29 16:16:09,996 INFO t._06_ExerciseLog4J [main] karen
+2023-01-29 16:16:09,996 INFO t._06_ExerciseLog4J [main] travelerName.contains("Developer")
