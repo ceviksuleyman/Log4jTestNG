@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(utilities.Listeners.class)
-public class _08_AutoExerciseGetBrands {
+public class _09_AutoExerciseGetBrands {
 
     @Test
     public void getBrands() throws IOException {

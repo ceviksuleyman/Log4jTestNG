@@ -18,9 +18,9 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 @Listeners(utilities.Listeners.class)
-public class _07_AutoExerciseGetProducts {
+public class _08_AutoExerciseGetProducts {
 
-    private Logger logger = LogManager.getLogger(_07_AutoExerciseGetProducts.class.getName());
+    private Logger logger = LogManager.getLogger(_08_AutoExerciseGetProducts.class.getName());
 
     @Test
     public void getProducts() throws IOException {

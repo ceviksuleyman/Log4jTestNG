@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome8",
+  "definitions": {
+    "Welcome8": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "roomNumber": {
+          "type": "integer"
+        },
+        "roomType": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "price": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "createdBy",
+        "createdDate",
+        "description",
+        "id",
+        "price",
+        "roomNumber",
+        "roomType",
+        "status"
+      ],
+      "title": "Welcome8"
+    }
+  }
+}

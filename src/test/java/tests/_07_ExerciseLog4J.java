@@ -19,9 +19,9 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Listeners(utilities.Listeners.class)
-public class _06_ExerciseLog4J {
+public class _07_ExerciseLog4J {
 
-    private static Logger logger = LogManager.getLogger(_06_ExerciseLog4J.class.getName());
+    private static Logger logger = LogManager.getLogger(_07_ExerciseLog4J.class.getName());
 
     @Test
     public void log4jTest() {

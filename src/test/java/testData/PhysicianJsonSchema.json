@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+    "Welcome2": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "bloodGroup": {
+          "type": "string"
+        },
+        "adress": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/User"
+        },
+        "speciality": {
+          "type": "string"
+        },
+        "appointments": {
+          "type": "null"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        },
+        "cstate": {
+          "$ref": "#/definitions/Cstate"
+        },
+        "examFee": {
+          "type": "number"
+        },
+        "image": {
+          "type": "null"
+        },
+        "imageContentType": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "adress",
+        "appointments",
+        "birthDate",
+        "bloodGroup",
+        "country",
+        "createdBy",
+        "createdDate",
+        "cstate",
+        "description",
+        "examFee",
+        "firstName",
+        "gender",
+        "id",
+        "image",
+        "imageContentType",
+        "lastName",
+        "phone",
+        "speciality",
+        "user"
+      ],
+      "title": "Welcome2"
+    },
+    "Country": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "Country"
+    },
+    "Cstate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        }
+      },
+      "required": [
+        "country",
+        "id",
+        "name"
+      ],
+      "title": "Cstate"
+    },
+    "User": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "login": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "activated": {
+          "type": "boolean"
+        },
+        "langKey": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "null"
+        },
+        "resetDate": {
+          "type": "null"
+        },
+        "ssn": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activated",
+        "createdBy",
+        "createdDate",
+        "email",
+        "firstName",
+        "id",
+        "imageUrl",
+        "langKey",
+        "lastName",
+        "login",
+        "resetDate",
+        "ssn"
+      ],
+      "title": "User"
+    }
+  }
+}

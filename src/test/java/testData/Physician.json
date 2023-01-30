@@ -1,0 +1,44 @@
+{
+  "createdBy": "cevik",
+  "createdDate": "2022-11-18T16:03:39.976299Z",
+  "id": 309705,
+  "firstName": "Doktor",
+  "lastName": "Team16",
+  "birthDate": "2002-03-11T22:00:00Z",
+  "phone": "999-343-4343",
+  "gender": "MALE",
+  "bloodGroup": "Apositive",
+  "adress": "Papua Yeni Gine",
+  "description": "team16hasta",
+  "user": {
+    "createdBy": "anonymousUser",
+    "createdDate": "2022-11-16T10:19:40.206848Z",
+    "id": 302609,
+    "login": "doktorteam16",
+    "firstName": "Doktor",
+    "lastName": "Team16",
+    "email": "doktorteam16@gmail.com",
+    "activated": true,
+    "langKey": "en",
+    "imageUrl": null,
+    "resetDate": null,
+    "ssn": "123-65-2365"
+  },
+  "speciality": "ALLERGY_IMMUNOLOGY",
+  "appointments": null,
+  "country": {
+    "id": 71230,
+    "name": "Gambia"
+  },
+  "cstate": {
+    "id": 1262,
+    "name": "Hawaii",
+    "country": {
+      "id": 1201,
+      "name": ""
+    }
+  },
+  "examFee": 1200.00,
+  "image": null,
+  "imageContentType": null
+}

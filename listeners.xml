@@ -9,20 +9,20 @@
     </listeners>
 
     <test verbose="2" preserve-order="true"
-          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_06_ExerciseLog4J.java">
+          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_07_ExerciseLog4J.java">
 
         <classes>
             <!--Test class path -->
-            <class name="tests._06_ExerciseLog4J"/>
+            <class name="tests._07_ExerciseLog4J"/>
         </classes>
     </test>
 
 
     <test verbose="2" preserve-order="true"
-          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_08_AutoExerciseGetBrands.java">
+          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_09_AutoExerciseGetBrands.java">
         <classes>
             <!--Test class path -->
-            <class name="tests._08_AutoExerciseGetBrands"/>
+            <class name="tests._09_AutoExerciseGetBrands"/>
         </classes>
     </test>
 
