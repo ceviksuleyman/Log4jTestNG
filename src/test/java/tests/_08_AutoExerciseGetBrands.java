@@ -3,6 +3,7 @@ package tests;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
 
@@ -14,6 +15,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 
+@Listeners(utilities.Listeners.class)
 public class _08_AutoExerciseGetBrands {
 
     @Test
@@ -21,7 +23,7 @@ public class _08_AutoExerciseGetBrands {
 
         Response response = given()
                 .when()
-                .get(ConfigReader.getProperty("autoExBaseUrl")+"brandsList");
+                .get(ConfigReader.getProperty("autoExBaseUrl") + "brandsList");
 
 
         JsonPath json = response.jsonPath();
@@ -38,7 +40,6 @@ public class _08_AutoExerciseGetBrands {
             System.out.println(json.getString("brands[" + i + "]"));
         }
         writer.close();
-
 
 
         // JSONObject

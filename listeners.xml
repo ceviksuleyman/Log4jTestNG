@@ -16,5 +16,15 @@
             <class name="tests._06_ExerciseLog4J"/>
         </classes>
     </test>
+
+
+    <test verbose="2" preserve-order="true"
+          name="C:\Users\cevik\IdeaProjects\ApiTestNG\src\test\java\tests\_08_AutoExerciseGetBrands.java">
+        <classes>
+            <!--Test class path -->
+            <class name="tests._08_AutoExerciseGetBrands"/>
+        </classes>
+    </test>
+
 </suite>
         <!-- https://testng.org/doc/documentation-main.html#testng-listeners-->
