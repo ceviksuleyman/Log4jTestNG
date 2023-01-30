@@ -69,7 +69,7 @@ public class _10_Serialization_DeSerialization {
         System.out.println("jphPojo = " + jphPojo);
 
 
-        // 2
+        // 2 https://gorest.co.in/public/v1/users/201205
         String jsonData2 = "{\n" +
                 "   \"meta\": null,\n" +
                 "   \"data\": {\n" +
