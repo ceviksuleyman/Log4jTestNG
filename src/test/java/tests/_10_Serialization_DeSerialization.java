@@ -3,6 +3,7 @@ package tests;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.Test;
+import pojos.GoRestPojo;
 import pojos.JPHPojo;
 
 import java.util.HashMap;
@@ -53,6 +54,7 @@ public class _10_Serialization_DeSerialization {
     @Test(priority = 1)
     public void convertJsonToPojo() throws JsonProcessingException { // De-serialization => json ---> Pojo
 
+        // 1
         String jsonData = "{\n" +
                 "  \"id\" : 201,\n" +
                 "  \"userId\" : 64,\n" +
@@ -65,5 +67,25 @@ public class _10_Serialization_DeSerialization {
         ObjectMapper objectMapper = new ObjectMapper();
         JPHPojo jphPojo = objectMapper.readValue(jsonData, JPHPojo.class);
         System.out.println("jphPojo = " + jphPojo);
+
+
+        // 2
+        String jsonData2 = "{\n" +
+                "   \"meta\": null,\n" +
+                "   \"data\": {\n" +
+                "      \"id\": 201205,\n" +
+                "      \"name\": \"Dhanpati Agarwal\",\n" +
+                "      \"email\": \"agarwal_dhanpati@leffler.biz\",\n" +
+                "      \"gender\": \"male\",\n" +
+                "      \"status\": \"active\"\n" +
+                "   }\n" +
+                "}";
+
+        // convert json object --> pojo object
+        GoRestPojo goRestPojo = objectMapper.readValue(jsonData2, GoRestPojo.class);
+        System.out.println("goRestPojo = " + goRestPojo);
+        System.out.println("name : " + goRestPojo.getData().getName());
+        System.out.println("email : " + goRestPojo.getData().getEmail());
+
     }
 }
