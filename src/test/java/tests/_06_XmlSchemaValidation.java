@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 public class _06_XmlSchemaValidation {
 
     @Test
-    public void jsonSchemaValidation() {
+    public void xmlSchemaValidation() {
 
         String url = "http://restapi.adequateshop.com/api/Traveler";
 
