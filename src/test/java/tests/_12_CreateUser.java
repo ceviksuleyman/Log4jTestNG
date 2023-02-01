@@ -25,7 +25,7 @@ public class _12_CreateUser {
     @Test
     public void testCreateUser(ITestContext context) throws FileNotFoundException {
 
-        // 1 ----------------
+        // 1 ---------------- https://gorest.co.in/
         JSONObject data = new JSONObject();
 
         data.put("name", faker.name().fullName());
