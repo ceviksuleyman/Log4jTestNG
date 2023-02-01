@@ -27,7 +27,7 @@ public class _08_AutoExerciseGetProducts {
 
         Response response = given()
                 .when()
-                .get(ConfigReader.getProperty("autoExBaseUrl") + "productsList");
+                .get(ConfigReader.getProperty("aExerciseUrl") + "productsList");
 
         JsonPath json = response.jsonPath();
         assertEquals(200, response.getStatusCode());

@@ -18,7 +18,7 @@ public class _01_GetPojo {
                 .queryParam("page", 2)
                 .queryParam("id", 5)
                 .when()
-                .get(ConfigReader.getProperty("reqresApiBaseUrl") + "{myPath}");
+                .get(ConfigReader.getProperty("reqresUrl") + "{myPath}");
 
 
         response.prettyPrint();

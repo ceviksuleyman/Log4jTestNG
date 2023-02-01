@@ -23,6 +23,13 @@ public class GoRestDataPojo {
         this.status = status;
     }
 
+    public GoRestDataPojo(String name, String email, String gender, String status) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+        this.status = status;
+    }
+
     public Integer getId() {
         return id;
     }

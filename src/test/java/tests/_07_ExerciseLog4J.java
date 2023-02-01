@@ -42,7 +42,7 @@ public class _07_ExerciseLog4J {
                 .queryParam("page", 2)
                 .queryParam("id", 5)
                 .when()
-                .get(ConfigReader.getProperty("reqresApiBaseUrl") + "{myPath}")
+                .get(ConfigReader.getProperty("reqresUrl") + "{myPath}")
                 .prettyPrint();
     }
 
@@ -53,7 +53,7 @@ public class _07_ExerciseLog4J {
         // http://restapi.adequateshop.com/api/Traveler?page=1
         given()
                 .when()
-                .get(ConfigReader.getProperty("restApiBaseUrl") + "Traveler?page=1")
+                .get(ConfigReader.getProperty("restUrl") + "Traveler?page=1")
                 .then()
                 .statusCode(200)
                 .header("Content-Type", "application/xml; charset=utf-8")
@@ -62,7 +62,7 @@ public class _07_ExerciseLog4J {
 
         Response response = given()
                 .when()
-                .get(ConfigReader.getProperty("restApiBaseUrl") + "Traveler?page=1");
+                .get(ConfigReader.getProperty("restUrl") + "Traveler?page=1");
 
         logger.info("Do Assertion getStatusCode");
 
@@ -86,7 +86,7 @@ public class _07_ExerciseLog4J {
 
         Response response = given()
                 .when()
-                .get(ConfigReader.getProperty("restApiBaseUrl") + "Traveler?page=1");
+                .get(ConfigReader.getProperty("restUrl") + "Traveler?page=1");
 
         // 1.
         XmlPath xmlPath = response.xmlPath();

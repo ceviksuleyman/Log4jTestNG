@@ -23,7 +23,7 @@ public class _09_AutoExerciseGetBrands {
 
         Response response = given()
                 .when()
-                .get(ConfigReader.getProperty("autoExBaseUrl") + "brandsList");
+                .get(ConfigReader.getProperty("aExerciseUrl") + "brandsList");
 
 
         JsonPath json = response.jsonPath();

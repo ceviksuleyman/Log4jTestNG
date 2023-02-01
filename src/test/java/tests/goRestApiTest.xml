@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="goRest">
+
+    <test thread-count="5" name="Test">
+        <classes>
+            <class name="tests._12_CreateUser"/>
+            <class name="tests._13_GetUser"/>
+            <class name="tests._14_UpdateUser"/>
+            <class name="tests._15_DeleteUser"/>
+        </classes>
+    </test>
+
+</suite>

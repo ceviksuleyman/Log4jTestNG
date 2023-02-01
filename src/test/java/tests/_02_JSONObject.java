@@ -19,7 +19,7 @@ public class _02_JSONObject {
         Response response = given()
                 .pathParams("myPath", "users").queryParam("page", 2)
                 .when()
-                .get(ConfigReader.getProperty("reqresApiBaseUrl") + "{myPath}");
+                .get(ConfigReader.getProperty("reqresUrl") + "{myPath}");
 
 
         // JsonPath

@@ -31,7 +31,7 @@ public class _04_RestfulPost {
         Response response = given().pathParam("1", "booking")
                 .contentType(ContentType.JSON)
                 .body(expectedDataJSONObject.toString())
-                .when().post(ConfigReader.getProperty("restfulApiBaseUrl") + "{1}");
+                .when().post(ConfigReader.getProperty("restfulUrl") + "{1}");
 
         response.prettyPrint();
 

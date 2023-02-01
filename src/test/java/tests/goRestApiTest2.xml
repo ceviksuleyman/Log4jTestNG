@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="goRest">
+
+    <test name="TestCreateUser1">
+        <classes>
+            <class name="tests._12_CreateUser"/>
+        </classes>
+    </test>
+
+    <test name="TestGetUser2">
+        <classes>
+            <class name="tests._13_GetUser"/>
+        </classes>
+    </test>
+
+    <test name="TestUpdateUser3">
+        <classes>
+            <class name="tests._14_UpdateUser"/>
+        </classes>
+    </test>
+
+    <test name="TestDeleteUser4">
+        <classes>
+            <class name="tests._15_DeleteUser"/>
+        </classes>
+    </test>
+
+</suite>
