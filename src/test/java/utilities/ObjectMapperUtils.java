@@ -1,15 +1,12 @@
 package utilities;
 
-
-
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
 public class ObjectMapperUtils {
 
-    private static ObjectMapper mapper; // final
+    private static final ObjectMapper mapper;
 
     static {
 

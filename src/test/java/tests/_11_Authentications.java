@@ -1,7 +1,5 @@
 package tests;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -24,7 +22,7 @@ public class _11_Authentications {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void digestAuthentication() {
 
         given()
@@ -37,7 +35,7 @@ public class _11_Authentications {
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void preemptiveAuthentication() {
 
         given()
@@ -48,8 +46,8 @@ public class _11_Authentications {
                 .body("authenticated", equalTo(true))
                 .log().all();
     }
-
-    @Test(priority = 4)
+    @Ignore
+    @Test(priority = 3)
     public void bearerTokenAuthentication() {
 
         String bearerToken = "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";
@@ -64,7 +62,7 @@ public class _11_Authentications {
     }
 
     @Ignore
-    @Test(priority = 5)
+    @Test(priority = 4)
     public void OAuth1Authentication() {
 
         // this is for OAuth1.0  Authentication
@@ -76,8 +74,8 @@ public class _11_Authentications {
                 .statusCode(200)
                 .log().all();
     }
-
-    @Test
+    @Ignore
+    @Test(priority = 5)
     public void OAuth2Authentication() {
 
         // this is for OAuth2.0  Authentication
@@ -90,7 +88,7 @@ public class _11_Authentications {
                 .log().all();
     }
 
-    @Test
+    @Test(priority = 6)
     public void apiKeyAuthentication() {
 
         // https://api.openweathermap.org/data/2.5/forecast/daily?q=Istabul&units=metric&cnt=7
