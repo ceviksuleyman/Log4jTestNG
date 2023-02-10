@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.Test;
 import pojos.GoRestPojo;
 import pojos.JPHPojo;
+import utilities.ObjectMapperUtils;
 
 import java.util.HashMap;
 
@@ -25,10 +26,12 @@ public class _10_Serialization_DeSerialization {
         // https://jsonplaceholder.typicode.com/todos
 
         // created java object using HashMap
-        HashMap<Object, Object> testData = new HashMap<>();
-        testData.put("userId", 64);
-        testData.put("title", "Tidy your room");
-        testData.put("completed", true);
+        HashMap<Object, Object> dataMap = new HashMap<>();
+        dataMap.put("id", 201);
+        dataMap.put("userId", 64);
+        dataMap.put("title", "Tidy your room");
+        dataMap.put("completed", true);
+        System.out.println("dataMap = " + dataMap);
 
 
         // created java object using pojo class
@@ -41,15 +44,24 @@ public class _10_Serialization_DeSerialization {
         String jsonData = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jphPojo);
         System.out.println("jsonData = " + jsonData);
 
-        /**
-         * jsonData = {
-         *   "id" : 201,
-         *   "userId" : 64,
-         *   "title" : "Tidy your room",
-         *   "completed" : true
-         * }
-         */
+
+        String jsonData2 = ObjectMapperUtils.convertJavaObjectToJson(jphPojo);
+        System.out.println("jsonData2 = " + jsonData2);
+
+        String jsonData3 = ObjectMapperUtils.convertJavaObjectToJson(dataMap);
+        System.out.println("jsonData3 = " + jsonData3);
+        System.out.println("===================================================");
     }
+
+    /**
+     * Output
+     * jsonData = {
+     * "id" : 201,
+     * "userId" : 64,
+     * "title" : "Tidy your room",
+     * "completed" : true
+     * }
+     */
 
     @Test(priority = 1)
     public void convertJsonToPojo() throws JsonProcessingException { // De-serialization => json ---> Pojo
@@ -69,6 +81,10 @@ public class _10_Serialization_DeSerialization {
         System.out.println("jphPojo = " + jphPojo);
 
 
+        JPHPojo jphPojo2 = ObjectMapperUtils.convertJsonToJava(jsonData, JPHPojo.class);
+        System.out.println("jphPojo2 = " + jphPojo2);
+
+
         // 2 https://gorest.co.in/public/v1/users/201205
         String jsonData2 = "{\n" +
                 "   \"meta\": null,\n" +
@@ -80,12 +96,18 @@ public class _10_Serialization_DeSerialization {
                 "      \"status\": \"active\"\n" +
                 "   }\n" +
                 "}";
+        System.out.println("jsonData2 = " + jsonData2);
 
         // convert json object --> pojo object
         GoRestPojo goRestPojo = objectMapper.readValue(jsonData2, GoRestPojo.class);
         System.out.println("goRestPojo = " + goRestPojo);
+
+
+        GoRestPojo goRestPojo2 = ObjectMapperUtils.convertJsonToJava(jsonData2, GoRestPojo.class);
+        System.out.println("goRestPojo2 = " + goRestPojo2);
+
+
         System.out.println("name : " + goRestPojo.getData().getName());
         System.out.println("email : " + goRestPojo.getData().getEmail());
-
     }
 }

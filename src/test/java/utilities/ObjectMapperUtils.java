@@ -35,7 +35,7 @@ public class ObjectMapperUtils {
 
         try {
 
-            jsonResult = mapper.writeValueAsString(obj);
+            jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
 
         } catch (IOException e) {
 
