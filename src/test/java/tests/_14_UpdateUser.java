@@ -1,7 +1,6 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;

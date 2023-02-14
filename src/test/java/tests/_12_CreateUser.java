@@ -1,6 +1,5 @@
 package tests;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 import org.json.JSONObject;
