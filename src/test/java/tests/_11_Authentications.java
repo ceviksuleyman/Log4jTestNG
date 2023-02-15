@@ -46,11 +46,11 @@ public class _11_Authentications {
                 .body("authenticated", equalTo(true))
                 .log().all();
     }
-    @Ignore
+    //@Ignore
     @Test(priority = 3)
     public void bearerTokenAuthentication() {
 
-        String bearerToken = "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";
+        String bearerToken = "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";
 
         given()
                 .headers("Authorization", "Bearer " + bearerToken)
@@ -74,13 +74,13 @@ public class _11_Authentications {
                 .statusCode(200)
                 .log().all();
     }
-    @Ignore
+    //@Ignore
     @Test(priority = 5)
     public void OAuth2Authentication() {
 
         // this is for OAuth2.0  Authentication
         given()
-                .auth().oauth2("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")
+                .auth().oauth2("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")
                 .when()
                 .get("https://api.github.com/user/repos")
                 .then()
