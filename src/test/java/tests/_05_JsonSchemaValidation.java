@@ -20,7 +20,7 @@ public class _05_JsonSchemaValidation {
     @Test
     public void jsonSchemaValidation() {
 
-        String url = "https://www.medunna.com/api/physicians/309705";
+        String url = "https://www.medunna.com/api/physicians/1301";
         //String url = "https://medunna.com/api/rooms/394029";
 
         Response res = given()

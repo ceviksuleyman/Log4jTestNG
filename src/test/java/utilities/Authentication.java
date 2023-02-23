@@ -13,8 +13,8 @@ public class Authentication {
 
     public static String generateToken() {
 
-        String username = "Cevik";
-        String password = "Cevikadmin64!";
+        String username = "Batch81";
+        String password = "Batch81+";
 
         Map<String, Object> postBody = new HashMap<>();
         postBody.put("username", username);

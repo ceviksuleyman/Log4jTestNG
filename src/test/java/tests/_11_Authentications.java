@@ -50,7 +50,7 @@ public class _11_Authentications {
     @Test(priority = 3)
     public void bearerTokenAuthentication() {
 
-        String bearerToken = "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";
+        String bearerToken = "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";
 
         given()
                 .headers("Authorization", "Bearer " + bearerToken)
@@ -80,7 +80,7 @@ public class _11_Authentications {
 
         // this is for OAuth2.0  Authentication
         given()
-                .auth().oauth2("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")
+                .auth().oauth2("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")
                 .when()
                 .get("https://api.github.com/user/repos")
                 .then()
