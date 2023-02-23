@@ -10,7 +10,6 @@ import utilities.ConfigReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 import static utilities.Authentication.generateToken;
@@ -28,7 +27,7 @@ public class _16_RoomPostMedunna {
         jsonObject.put("roomType", "DELUXE");
         jsonObject.put("status", true);
         jsonObject.put("price", 1200);
-        jsonObject.put("description", "admin");
+        jsonObject.put("description", "sample API Test");
 
         // 2
         File file = new File("src/test/java/testData/roomPost.json");
