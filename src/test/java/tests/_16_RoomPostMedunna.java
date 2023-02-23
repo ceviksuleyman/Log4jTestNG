@@ -41,9 +41,10 @@ public class _16_RoomPostMedunna {
                 .headers("Authorization", "Bearer " + generateToken(),
                         "Content-Type", ContentType.JSON, "Accept", ContentType.JSON)
                 .contentType(ContentType.JSON)
-                .body(jsonObjectData.toString()).when()
-                .post(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}")
-                .then().log().all();
+                .body(jsonObject.toString())
+                .when().post(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}")
+                .then().statusCode(201)
+                .log().all();
 
     }
 }
