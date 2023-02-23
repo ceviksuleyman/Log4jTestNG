@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Medunna Room Api Test">
+
+    <test thread-count="5" name="Test">
+        <classes>
+            <class name="tests._16_RoomPost"/>
+            <class name="tests._17_RoomUpdate"/>
+            <class name="tests._18_RoomDelete"/>
+        </classes>
+    </test>
+</suite>
