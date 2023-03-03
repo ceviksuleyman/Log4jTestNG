@@ -9,7 +9,9 @@ public class AutoExerciseBaseUrl {
 
     public static void autoExerciseSetup() {
 
-        spec = new RequestSpecBuilder().setBaseUri("https://automationexercise.com/api/").build();
+        spec = new RequestSpecBuilder().
+                setBaseUri("https://automationexercise.com/api/").
+                build();
     }
 
 }

@@ -23,7 +23,11 @@ public class Authentication {
 
         String endPoint = "https://www.medunna.com/api/authenticate";
 
-        Response response = given().contentType(ContentType.JSON).body(postBody).when().post(endPoint);
+        Response response = given().
+                contentType(ContentType.JSON).
+                body(postBody).
+                when().
+                post(endPoint);
 
         JsonPath json = response.jsonPath();
 
