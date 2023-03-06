@@ -43,12 +43,12 @@ public class _16_RoomPost {
 
 
         Response response = given().
-                pathParams("1", "api", "2", "rooms").
+                pathParams("1", "rooms").
                 headers("Authorization", "Bearer " + generateToken()).
                 contentType(ContentType.JSON).
                 body(jsonObject.toString()).
                 when().
-                post(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}");
+                post(ConfigReader.getProperty("medunnaUrl") + "/{1}");
 
         response.
                 then().
@@ -61,5 +61,6 @@ public class _16_RoomPost {
         System.out.println("Generated id = " + id);
 
         context.getSuite().setAttribute("room_id", id);
+        context.getSuite().setAttribute("room_number", roomNumber);
     }
 }

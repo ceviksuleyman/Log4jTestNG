@@ -5,8 +5,9 @@
     <test thread-count="5" name="Test">
         <classes>
             <class name="tests._16_RoomPost"/>
-            <class name="tests._17_RoomUpdate"/>
-            <class name="tests._18_RoomDelete"/>
+            <class name="tests._17_RoomGet"/>
+            <class name="tests._18_RoomUpdate"/>
+            <class name="tests._19_RoomDelete"/>
         </classes>
     </test>
 </suite>

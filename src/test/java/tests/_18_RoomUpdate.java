@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static utilities.Authentication.generateToken;
 
-public class _17_RoomUpdate {
+public class _18_RoomUpdate {
 
     @Test
     public void roomUpdate(ITestContext context) {
@@ -33,12 +33,12 @@ public class _17_RoomUpdate {
         jsonObject.put("description", "API Test");
 
         Response response = given().
-                pathParams("1", "api", "2", "rooms").
+                pathParams("1","rooms").
                 headers("Authorization", "Bearer " + generateToken()).
                 contentType(ContentType.JSON).
                 body(jsonObject.toString()).
                 when().
-                put(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}");
+                put(ConfigReader.getProperty("medunnaUrl") + "/{1}");
 
         response.
                 then().

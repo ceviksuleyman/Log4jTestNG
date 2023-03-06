@@ -1,29 +1,31 @@
 package tests;
 
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 import static utilities.Authentication.generateToken;
 
-public class _18_RoomDelete {
+public class _17_RoomGet {
 
     @Test
-    public void roomDelete(ITestContext context) {
+    public void roomGetTest(ITestContext context) {
 
         int id = (int) context.getSuite().getAttribute("room_id");
+        int room_number = (int) context.getSuite().getAttribute("room_number");
 
-        Response response = given().
-                pathParams("1", "api", "2", "rooms", "3", id).
+        given().
+                pathParams("1", "rooms", "2", id).
                 headers("Authorization", "Bearer " + generateToken()).
                 when().
-                delete(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}/{3}");
-
-        response.
+                get(ConfigReader.getProperty("medunnaUrl") + "/{1}/{2}").
                 then().
-                statusCode(204).
+                statusCode(200).
+                body("roomNumber", equalTo(room_number)).
                 log().all();
     }
 }
