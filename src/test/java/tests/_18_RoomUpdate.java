@@ -45,7 +45,7 @@ public class _18_RoomUpdate {
                 statusCode(200).
                 body("roomNumber", equalTo(roomNumber)).
                 body("status", equalTo(status)).
-                log().all();
+                log().body();
 
     }
 }

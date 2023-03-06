@@ -24,6 +24,6 @@ public class _19_RoomDelete {
         response.
                 then().
                 statusCode(204).
-                log().all();
+                log().body();
     }
 }

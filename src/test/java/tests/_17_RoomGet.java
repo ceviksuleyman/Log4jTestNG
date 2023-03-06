@@ -26,6 +26,6 @@ public class _17_RoomGet {
                 then().
                 statusCode(200).
                 body("roomNumber", equalTo(room_number)).
-                log().all();
+                log().body();
     }
 }

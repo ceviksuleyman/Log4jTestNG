@@ -55,7 +55,7 @@ public class _16_RoomPost {
                 statusCode(201).
                 body("roomNumber", equalTo(roomNumber)).
                 body("status", equalTo(status)).
-                log().all();
+                log().body();
 
         int id = response.jsonPath().getInt("id");
         System.out.println("Generated id = " + id);
