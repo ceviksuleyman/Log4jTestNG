@@ -4,7 +4,7 @@
     <parameter name="id" value="3"></parameter>
     <test thread-count="5" name="Test">
         <classes>
-            <class name="tests._20_DataDriven"></class>
+            <class name="tests._20_DataDriven"/>
         </classes>
     </test>
 </suite>
