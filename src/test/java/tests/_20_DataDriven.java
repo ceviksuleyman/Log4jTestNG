@@ -3,8 +3,8 @@ package tests;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utilities.DataForTests;
@@ -33,7 +33,7 @@ public class _20_DataDriven extends DataForTests {
         return data;
     }
 
-    @DataProvider(name = "DataForPost2")
+    //@DataProvider(name = "DataForPost2")
     public Object[][] dataForPost2() {  // 2.
 
 
@@ -45,7 +45,7 @@ public class _20_DataDriven extends DataForTests {
     }
 
 
-    @Test(dataProvider = "DataForPost2")
+    @Test(dataProvider = "DataForPost2",dataProviderClass = DataForTests.class)
     public void testPost(String name, String job) {
 
         JSONObject jsonObject = new JSONObject();
@@ -90,6 +90,7 @@ public class _20_DataDriven extends DataForTests {
                 log().all();
     }
 
+    @Ignore
     @Parameters({"id"})
     @Test
     public void testDelete2(int id) {

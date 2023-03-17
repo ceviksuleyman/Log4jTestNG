@@ -1,3 +1,0 @@
-2023-02-22 19:15:32,756 INFO t._07_ExerciseLog4J [main] get request url http://restapi.adequateshop.com/api/Traveler?page=1
-2023-02-22 19:15:35,835 INFO t._07_ExerciseLog4J [main] Do Assertion getStatusCode
-2023-02-22 19:15:35,848 INFO t._07_ExerciseLog4J [main] Do Assertion response.xmlPath()
