@@ -1,5 +1,7 @@
 package tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -8,8 +10,12 @@ import static utilities.HerOkuAppAuth.generateTokenHerOkuApp;
 
 public class _24_DeleteHerOkuApp {
 
+    private static Logger logger = LogManager.getLogger(_24_DeleteHerOkuApp.class.getName());
+
     @Test
     public void testHerOkuDelete(ITestContext context) {
+
+        logger.info("================ Deleting Booking ================");
 
         int bookingId = (int) context.getSuite().getAttribute("bookingId");
 
@@ -23,5 +29,7 @@ public class _24_DeleteHerOkuApp {
                 .assertThat()
                 .statusCode(201)
                 .log().all();
+
+        logger.info("================ Booking Deleted =================");
     }
 }

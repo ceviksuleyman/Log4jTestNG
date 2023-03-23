@@ -3,8 +3,11 @@ package tests;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pojos.herOkuApp.Booking;
 import pojos.herOkuApp.BookingDates;
@@ -15,10 +18,13 @@ import utilities.ObjectMapperUtils;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class _21_CreateHerOkuApp extends HerOkuAppBase {
 
+public class _21_CreateHerOkuApp extends HerOkuAppBase {
+    private static Logger logger = LogManager.getLogger(_21_CreateHerOkuApp.class.getName());
     @Test
     public void testCreateHerOkuApp(ITestContext context) {
+
+        logger.info("============= Creating Booking =============");
 
         Faker faker = new Faker();
 
@@ -55,5 +61,7 @@ public class _21_CreateHerOkuApp extends HerOkuAppBase {
         System.out.println("Generated bookingId = " + bookingId);
 
         context.getSuite().setAttribute("bookingId", bookingId);
+
+        logger.info("============= Booking is Created =============");
     }
 }

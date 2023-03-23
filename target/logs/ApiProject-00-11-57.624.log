@@ -1,0 +1,8 @@
+2023-03-24 00:11:57,622 INFO t._21_CreateHerOkuApp [main] ============= Creating Booking =============
+2023-03-24 00:11:59,202 INFO t._21_CreateHerOkuApp [main] ============= Booking is Created =============
+2023-03-24 00:11:59,207 INFO t._22_ReadHerOkuApp [main] ============== Reading Booking Info ==============
+2023-03-24 00:12:01,120 INFO t._22_ReadHerOkuApp [main] ============== Booking info is Displayed ==============
+2023-03-24 00:12:01,121 INFO t._23_UpdateHerOkuApp [main] =============== Updating Booking ===============
+2023-03-24 00:12:03,341 INFO t._23_UpdateHerOkuApp [main] ============== Booking Updated ===============
+2023-03-24 00:12:03,343 INFO t._24_DeleteHerOkuApp [main] ================ Deleting Booking ================
+2023-03-24 00:12:05,541 INFO t._24_DeleteHerOkuApp [main] ================ Booking Deleted =================

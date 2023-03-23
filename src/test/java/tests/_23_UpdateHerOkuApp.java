@@ -1,6 +1,8 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import pojos.herOkuApp.Booking;
@@ -13,8 +15,12 @@ import static utilities.HerOkuAppAuth.generateTokenHerOkuApp;
 
 public class _23_UpdateHerOkuApp {
 
+    private static Logger logger = LogManager.getLogger(_23_UpdateHerOkuApp.class.getName());
+
     @Test
     public void testHerOkuUpdate(ITestContext context) {
+
+        logger.info("=============== Updating Booking ===============");
 
         Faker faker = new Faker();
         int bookingId = (int) context.getSuite().getAttribute("bookingId");
@@ -43,5 +49,7 @@ public class _23_UpdateHerOkuApp {
                 .body("firstname", equalTo(firstname))
                 .body("lastname", equalTo(lastname))
                 .log().body();
+
+        logger.info("============== Booking Updated ===============");
     }
 }
