@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="goRest">
+
+    <test thread-count="5" name="Test">
+        <classes>
+            <class name="tests._21_CreateHerOkuApp"/>
+            <class name="tests._22_ReadHerOkuApp"/>
+            <class name="tests._23_UpdateHerOkuApp"/>
+            <class name="tests._24_DeleteHerOkuApp"/>
+        </classes>
+    </test>
+
+</suite>

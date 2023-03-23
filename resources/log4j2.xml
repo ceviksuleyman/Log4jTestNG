@@ -42,7 +42,7 @@
 
         <!--ROOT LEVEL = TUM SINIFLARA OTOMATIK UYGULANAN AYAR-->
         <Root level="trace">
-            <AppenderRef ref="Console"/>
+            <!--<AppenderRef ref="Console"/>-->
             <AppenderRef ref="file"/>
         </Root>
 

@@ -13,5 +13,4 @@ public class AutoExerciseBaseUrl {
                 setBaseUri("https://automationexercise.com/api/").
                 build();
     }
-
 }
